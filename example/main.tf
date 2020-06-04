@@ -48,16 +48,16 @@ module "eks_cluster" {
       {
         node_group_name = "cluster-worker-node1"
         instance_types = "t2.micro"
-        desired_size   = 3
-        max_size     = 3
-        min_size    = 3
+        desired_size   = 1
+        max_size     = 1
+        min_size    = 1
       },
       {
         node_group_name = "cluster-worker-node2"
         instance_types = "t2.micro"
-        desired_size   = 3
-        max_size     = 3
-        min_size    = 3
+        desired_size   = 1
+        max_size     = 1
+        min_size    = 1
       }
     ]
 }
