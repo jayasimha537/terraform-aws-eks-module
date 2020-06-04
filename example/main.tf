@@ -4,7 +4,6 @@ provider "aws" {
 }
 
 locals {
-  eks_cluster_name = "mycluster"
   projectName = "myproject"
 }
 
@@ -23,7 +22,7 @@ module "dev_vpc" {
   enable_nat_gw = false
   default_tags = {
     "Author" = "Jayasimha"
-    "kubernetes.io/cluster/${local.eks_cluster_name}" = "shared"
+    "kubernetes.io/cluster/${local.projectName}" = "shared"
   }
 
   public_subnet_tags = {
