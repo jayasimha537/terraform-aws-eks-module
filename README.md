@@ -1,11 +1,14 @@
 # terraform-aws-eks-module
 EKS with Dynamic node groups
-
+## EKS Cluster Name = ${projectName}_${environment_eks}_cluster
 # Sample Usage
 ```sh
 $ git clone https://github.com/jayasimha537/terraform-aws-eks-module.git
 $ cd terraform-aws-eks-module/example/
 $ terraform plan  -var-file="nacl_rules.tfvars"
+$ # aws eks --region us-east-1 update-kubeconfig --name <EKS Cluster Name>
+$ aws eks --region us-east-1 update-kubeconfig --name project1_dev_eks_cluster
+$ kubectl get svc
 ```
 
 # Creating VPC 
