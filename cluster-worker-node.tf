@@ -16,7 +16,7 @@ resource "aws_eks_node_group" "cluster-worker-node" {
     aws_iam_role_policy_attachment.cluster-worker-node-AmazonEC2ContainerRegistryReadOnly,
   ]
   tags = {
-    Name = var.worker_nodes[count.index]["node_group_name"]
+    Name = "Jayasimha"
   }
 }
 
